@@ -31,16 +31,16 @@ id charlie
 ~~~
 ### 6: PASSWORD POLICIES
 ~~~
-echo "Step 1: Set password aging policy for alice"
+"Step 1: Set password aging policy for alice"
 sudo chage -M 60 -m 5 -W 10 alice
 
-echo "Step 2: Force bob password expire"
+"Step 2: Force bob password expire"
 sudo passwd --expire bob
 
-echo "Step 3: Set account expiration date for charlie"
-sudo chage -E 2025-12-31 charlie
+ "Step 3: Set account expiration date for charlie"
+ chage -E 2025-12-31 charlie
 
-echo "Step 4: Lock and Unlock alice"
+ "Step 4: Lock and Unlock alice"
 sudo passwd -l alice  
 sudo passwd -u alice  
 ~~~
@@ -48,7 +48,7 @@ sudo passwd -u alice
 ~~~
 sudo chage -I 30 bob
 
-echo "Verify password policies:"
+"Verify password policies:"
 sudo chage -l alice
 sudo chage -l bob
 sudo chage -l charlie
